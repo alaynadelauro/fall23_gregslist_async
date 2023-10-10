@@ -3,6 +3,7 @@ import { Value } from './models/Value.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { isValidProp } from './utils/IsValidProp.js'
 import { loadState } from './utils/Store.js'
+import { House } from './models/House.js'
 
 class ObservableAppState extends EventEmitter {
   page = ''
@@ -17,6 +18,10 @@ class ObservableAppState extends EventEmitter {
 
   /** @type {Car[]} */
   cars = []
+
+
+  /**@type {House[]} */
+  houses = []
 
   // Used to load initial data
   init() {
